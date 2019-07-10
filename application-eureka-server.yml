@@ -1,0 +1,30 @@
+﻿spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 7001
+spring:
+  profiles: dev
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/    #对外暴露的注册地址
+    fetch-registry: false               #不去发现服务
+    register-with-eureka: false        #不将自己注册
+---
+
+server:
+  port: 7002
+spring:
+  profiles: test
+eureka:
+  instance:
+    hostname: eureka7002.com
+  client:
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/    #对外暴露的注册地址
+    fetch-registry: false               #不去发现服务
+    register-with-eureka: false        #不将自己注册
