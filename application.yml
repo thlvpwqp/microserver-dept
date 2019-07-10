@@ -1,0 +1,13 @@
+﻿spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: microserver-config-dev
+---
+spring:
+  profiles: test
+  application:
+    name: microserver-config-test
